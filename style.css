@@ -1,0 +1,37 @@
+table{
+    width: 100%;
+}
+
+tr, td,th{
+    border: 1px solid black;
+}
+
+input{
+    width: 99%;
+}
+
+.add{
+    width: 100%;
+}
+.container{
+ background-color: aqua;
+ margin-top: 50px;
+
+}
+.sectionchild{
+    border: 1px solid blue;
+    
+}
+
+div{
+    display: grid;
+    grid-template-columns: 10% 60% 20% 10%
+}
+h1,h2,h3{
+    text-align: center;
+}
+.delete{
+  margin-left: 50%;
+  margin-bottom: 10px;
+  
+}
