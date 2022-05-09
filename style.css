@@ -23,10 +23,23 @@ input{
     
 }
 
-div{
+.div{
     display: grid;
-    grid-template-columns: 10% 60% 20% 10%
+    grid-template-columns: 20% 55% 15% 10%
 }
+.all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.checkbox{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+
 h1,h2,h3{
     text-align: center;
 }
@@ -34,4 +47,12 @@ h1,h2,h3{
   margin-left: 50%;
   margin-bottom: 10px;
   
+}
+
+.first,.second{
+    display: flex;
+   flex-direction: column;
+   margin-left: 60px;
+   align-items: center;
+   justify-content: center;
 }
