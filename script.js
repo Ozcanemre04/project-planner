@@ -90,6 +90,11 @@ function addHtml(todo) {
             }
         })
 
+        deletetodo.addEventListener('click',(e)=>{
+            let parent=e.target.parentElement
+            parent.remove()
+        })
+
 //select event
         select.addEventListener('change', () => {
                 if (select.value === "doing") {
@@ -136,11 +141,11 @@ function addHtml(todo) {
 
             if(select.value==='sort'){
                 let t = h5.innerText
-                
                 console.log(t);
-                
-               
-                
+            
+            
+            
+            
             }
 
 
@@ -171,7 +176,7 @@ function createtodo() {
 
         doing: false,
         done: false,
-        remainingDate: day
+        remainingDate: "in "+day+ " days"
     }]
 
 
@@ -188,6 +193,5 @@ function createtodo() {
 
 
 add.addEventListener('click', createtodo)
-
 
 
