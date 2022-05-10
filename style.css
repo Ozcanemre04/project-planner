@@ -1,6 +1,9 @@
-fond / titre / header / modif table / boutton / background body / couleur des elements ;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
 
-
+}
 
 table{
     width: 100%;
@@ -9,28 +12,54 @@ table{
 tr, td,th{
     border: 1px solid black;
 }
+tr{
+    height: 50px;
+}
 
 input{
-    width: 99%;
+    width: 97%;
 }
 
 .add{
-    width: 100%;
+    width: 50%;
+    height: 35px;
+    padding: 10px;
+    margin-left: 25%;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+
 }
 .container{
- background-color: aqua;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
  margin-top: 50px;
 
 }
 .sectionchild{
-    border: 1px solid blue;
+    border: 1px solid darkblue;
     
 }
 
-div{
+.div{
     display: grid;
-    grid-template-columns: 10% 60% 20% 10%
+    grid-template-columns: 20% 55% 15% 10%
 }
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.checkbox{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+h1{
+    margin-bottom: 40px;
+}
+
 h1,h2,h3{
     text-align: center;
 }
@@ -38,4 +67,34 @@ h1,h2,h3{
   margin-left: 50%;
   margin-bottom: 10px;
   
+}
+
+
+
+.doing:checked ~ .name{
+    color: green;
+    opacity: 0.6;
+}
+
+.done:checked + .name{
+    text-decoration: line-through;
+    color: red;
+    opacity: 0.5;
+}
+#select{
+    height: 30px;
+    width: 15%;
+    background-color: antiquewhite;
+    margin-bottom: 10px;
+}
+label:first-of-type{
+    margin-left: 15px;
+}
+.delete{
+    width: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color: darkblue;
+    
 }
