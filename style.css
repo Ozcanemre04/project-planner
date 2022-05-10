@@ -29,8 +29,9 @@ input{
 }
 .all{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 
 }
 .checkbox{
@@ -49,10 +50,15 @@ h1,h2,h3{
   
 }
 
-.first,.second{
-    display: flex;
-   flex-direction: column;
-   margin-left: 60px;
-   align-items: center;
-   justify-content: center;
+
+
+.doing:checked ~ .name{
+    color: green;
+    opacity: 0.6;
+}
+
+.done:checked + .name{
+    text-decoration: line-through;
+    color: red;
+    opacity: 0.5;
 }
