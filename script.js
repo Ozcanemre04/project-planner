@@ -78,7 +78,7 @@ function addHtml(todo) {
 //click event
         doingcb.addEventListener('click', () => {
             if (doingcb.checked) {
-                doingcb.classList.toggle('active')
+                doingcb.classList.add('active')
                 donecb.checked=false
                 donecb.classList.remove('clicked')
 
@@ -92,7 +92,7 @@ function addHtml(todo) {
 
         donecb.addEventListener('click', () => {
             if (donecb.checked) {
-                donecb.classList.toggle('clicked')
+                donecb.classList.add('clicked')
                 doingcb.checked=false
                 doingcb.classList.remove('active')
             }
