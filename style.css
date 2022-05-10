@@ -1,0 +1,64 @@
+table{
+    width: 100%;
+}
+
+tr, td,th{
+    border: 1px solid black;
+}
+
+input{
+    width: 99%;
+}
+
+.add{
+    width: 100%;
+}
+.container{
+ background-color: aqua;
+ margin-top: 50px;
+
+}
+.sectionchild{
+    border: 1px solid blue;
+    
+}
+
+.div{
+    display: grid;
+    grid-template-columns: 20% 55% 15% 10%
+}
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.checkbox{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+
+h1,h2,h3{
+    text-align: center;
+}
+.delete{
+  margin-left: 50%;
+  margin-bottom: 10px;
+  
+}
+
+
+
+.doing:checked ~ .name{
+    color: green;
+    opacity: 0.6;
+}
+
+.done:checked + .name{
+    text-decoration: line-through;
+    color: red;
+    opacity: 0.5;
+}
