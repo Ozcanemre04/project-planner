@@ -25,8 +25,9 @@ input{
     height: 35px;
     padding: 10px;
     margin-left: 25%;
-    background-color: lightgreen;
+    background-color: #8EC5FC;
     margin-bottom: 10px;
+    border-radius: 10px;
 
 }
 .container{
@@ -42,7 +43,7 @@ input{
 
 .div{
     display: grid;
-    grid-template-columns: 20% 55% 15% 10%
+    grid-template-columns: 30% 40% 18% 12%
 }
 .all{
     display: flex;
@@ -55,6 +56,7 @@ input{
     display: flex;
     margin-top: 20px;
     margin-left: 10px;
+    border-radius: 10px;
 }
 h1{
     margin-bottom: 40px;
@@ -66,6 +68,14 @@ h1,h2,h3{
 .delete{
   margin-left: 50%;
   margin-bottom: 10px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: darkblue;
+  transform: translateX(-50%);
+  
+  
   
 }
 
@@ -86,15 +96,15 @@ h1,h2,h3{
     width: 15%;
     background-color: antiquewhite;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 label:first-of-type{
     margin-left: 15px;
 }
-.delete{
-    width: 80px;
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
-    background-color: darkblue;
-    
+
+.name{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    margin-left: 15px
 }

@@ -1,4 +1,4 @@
-let naame = document.querySelector('.name')
+let naame = document.querySelector('.named')
 let description = document.querySelector('.description')
 let date = document.querySelector('.date')
 let add = document.querySelector('.add')
