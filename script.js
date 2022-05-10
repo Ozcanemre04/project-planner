@@ -85,7 +85,7 @@ function addHtml(todo) {
                 
             }
             else{
-                donecb.classList.remove('active')
+                doingcb.classList.remove('active')
 
             }
         })
