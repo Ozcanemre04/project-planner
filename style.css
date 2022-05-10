@@ -1,3 +1,12 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+
 table{
     width: 100%;
 }
@@ -6,26 +15,43 @@ tr, td,th{
     border: 1px solid black;
 }
 
+tr{
+    height: 50px;
+}
+
 input{
-    width: 99%;
+    width: 97%;
 }
 
 .add{
-    width: 100%;
+    width: 50%;
+    height: 35px;
+    padding: 10px;
+    margin-left: 25%;
+    background-color: #8EC5FC;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
 }
 .container{
- background-color: aqua;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
+
  margin-top: 50px;
 
 }
 .sectionchild{
-    border: 1px solid blue;
+
+    border: 1px solid darkblue;
+
     
 }
 
 .div{
     display: grid;
-    grid-template-columns: 20% 55% 15% 10%
+
+    grid-template-columns: 30% 40% 18% 12%
+
 }
 .all{
     display: flex;
@@ -38,6 +64,11 @@ input{
     display: flex;
     margin-top: 20px;
     margin-left: 10px;
+
+    border-radius: 10px;
+}
+h1{
+    margin-bottom: 40px;
 }
 
 
@@ -47,6 +78,16 @@ h1,h2,h3{
 .delete{
   margin-left: 50%;
   margin-bottom: 10px;
+
+  width: 80px;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: darkblue;
+  transform: translateX(-50%);
+  
+  
+
   
 }
 
@@ -61,4 +102,23 @@ h1,h2,h3{
     text-decoration: line-through;
     color: red;
     opacity: 0.5;
+
+}
+#select{
+    height: 30px;
+    width: 15%;
+    background-color: antiquewhite;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+label:first-of-type{
+    margin-left: 15px;
+}
+
+.name{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    margin-left: 15px
+
 }

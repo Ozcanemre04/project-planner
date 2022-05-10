@@ -5,7 +5,9 @@ let add = document.querySelector('.add')
 let remaining = document.querySelector('.remaining')
 let container = document.querySelector('.container')
 let select = document.querySelector('#select')
+
 let sortt = document.querySelector('.sort')
+
 
 
 
@@ -79,10 +81,12 @@ function addHtml(todo) {
                 doingcb.classList.toggle('active')
                 donecb.checked=false
                 donecb.classList.remove('clicked')
+
                 
             }
             else{
                 donecb.classList.remove('active')
+
             }
         })
 
@@ -92,6 +96,7 @@ function addHtml(todo) {
                 doingcb.checked=false
                 doingcb.classList.remove('active')
             }
+
             else{
                 donecb.classList.remove('clicked')
             }
@@ -100,6 +105,7 @@ function addHtml(todo) {
         deletetodo.addEventListener('click',(e)=>{
             let parent=e.target.parentElement
             parent.remove()
+
         })
 
 //select event
@@ -147,7 +153,7 @@ function addHtml(todo) {
                 }
             }
 
-        
+
 
 
         })
@@ -177,6 +183,7 @@ function createtodo() {
 
         doing: false,
         done: false,
+
         remainingDate: "in "+day+ " days"
     },]
 
@@ -195,6 +202,8 @@ function sortedbydate(arr){
 
 
 
+
 add.addEventListener('click', createtodo)
+
 
 
