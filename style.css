@@ -1,9 +1,11 @@
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #8EC5FC;
     background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
 
 }
+
 
 table{
     width: 100%;
@@ -12,6 +14,7 @@ table{
 tr, td,th{
     border: 1px solid black;
 }
+
 tr{
     height: 50px;
 }
@@ -33,17 +36,22 @@ input{
 .container{
     background-color: #8EC5FC;
     background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
+
  margin-top: 50px;
 
 }
 .sectionchild{
+
     border: 1px solid darkblue;
+
     
 }
 
 .div{
     display: grid;
+
     grid-template-columns: 30% 40% 18% 12%
+
 }
 .all{
     display: flex;
@@ -56,11 +64,13 @@ input{
     display: flex;
     margin-top: 20px;
     margin-left: 10px;
+
     border-radius: 10px;
 }
 h1{
     margin-bottom: 40px;
 }
+
 
 h1,h2,h3{
     text-align: center;
@@ -68,6 +78,7 @@ h1,h2,h3{
 .delete{
   margin-left: 50%;
   margin-bottom: 10px;
+
   width: 80px;
   padding: 5px;
   border-radius: 10px;
@@ -76,6 +87,7 @@ h1,h2,h3{
   transform: translateX(-50%);
   
   
+
   
 }
 
@@ -90,6 +102,7 @@ h1,h2,h3{
     text-decoration: line-through;
     color: red;
     opacity: 0.5;
+
 }
 #select{
     height: 30px;
@@ -107,4 +120,5 @@ label:first-of-type{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
     margin-left: 15px
+
 }

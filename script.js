@@ -6,6 +6,8 @@ let remaining = document.querySelector('.remaining')
 let container = document.querySelector('.container')
 let select = document.querySelector('#select')
 
+let sortt = document.querySelector('.sort')
+
 
 
 
@@ -79,6 +81,12 @@ function addHtml(todo) {
                 doingcb.classList.toggle('active')
                 donecb.checked=false
                 donecb.classList.remove('clicked')
+
+                
+            }
+            else{
+                donecb.classList.remove('active')
+
             }
         })
 
@@ -88,6 +96,16 @@ function addHtml(todo) {
                 doingcb.checked=false
                 doingcb.classList.remove('active')
             }
+
+            else{
+                donecb.classList.remove('clicked')
+            }
+        })
+
+        deletetodo.addEventListener('click',(e)=>{
+            let parent=e.target.parentElement
+            parent.remove()
+
         })
 
 //select event
@@ -97,6 +115,7 @@ function addHtml(todo) {
                     if (doingcb.classList.contains("active")) {
 
                         sectionchild.style.display = "block"
+
 
                     } else {
                         sectionchild.style.display = "none"
@@ -134,14 +153,7 @@ function addHtml(todo) {
                 }
             }
 
-            if(select.value==='sort'){
-                let t = h5.innerText
-                
-                console.log(t);
-                
-               
-                
-            }
+
 
 
         })
@@ -171,16 +183,20 @@ function createtodo() {
 
         doing: false,
         done: false,
-        remainingDate: day
-    }]
+
+        remainingDate: "in "+day+ " days"
+    },]
 
 
     addHtml(todo)
-
 }
+sortt.addEventListener('click',sortedbydate)
+function sortedbydate(arr){
 
-
-
+    let sorted = arr.sort(function (a, b) {     
+        return a.date-(b.date); });  
+         createtodo(sorted)   
+}
 
 
 
