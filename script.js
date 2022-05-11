@@ -18,6 +18,8 @@ function addHtml(todo) {
     let sectionchild = document.createElement('section')
     sectionchild.classList.add('sectionchild')
     container.appendChild(sectionchild)
+    sectionchild.id = todo.id
+
 
     let div = document.createElement('div')
     div.classList.add('div')
@@ -91,6 +93,9 @@ function addHtml(todo) {
         todos.forEach(td => {
             if (td.name === name) td.doing = !td.doing
         });
+        todos.forEach(td => {
+            if (td.name === name&td.done===true) td.done =! td.done
+        })
 
         localStorage.setItem('todos', JSON.stringify(todos))
 
@@ -99,11 +104,11 @@ function addHtml(todo) {
     donecb.addEventListener('click', (e) => {
         if (donecb.checked) {
             donecb.classList.add('clicked')
-            doingcb.checked = false
+             doingcb.checked = false
             doingcb.classList.remove('active')
 
-
-        } else {
+        }
+         else {
             donecb.classList.remove('clicked')
         }
         let parent = e.target.parentElement;
@@ -113,6 +118,11 @@ function addHtml(todo) {
         todos.forEach(td => {
             if (td.name === name) td.done = !td.done
         });
+        
+        todos.forEach(td => {
+            if (td.name === name&td.doing===true) td.doing =! td.doing
+        })
+       
 
         localStorage.setItem('todos', JSON.stringify(todos))
     })
@@ -123,7 +133,7 @@ function addHtml(todo) {
         console.log(name);
         parent.remove()
         let todos = JSON.parse(localStorage.getItem('todos'));
-        todos = todos.filter(td => td.name != name);
+        todos = todos.filter(td => td.id != parent.id);
         localStorage.setItem('todos', JSON.stringify(todos))
 
     })
@@ -182,7 +192,7 @@ function addHtml(todo) {
 
 
 
-const startConf = () => {
+const startConf= () => {
     const todos = JSON.parse(localStorage.getItem('todos'))
     if (!todos) {
         localStorage.setItem('todos', JSON.stringify([]))
@@ -221,22 +231,35 @@ const createtodo = () => {
         doing: false,
         done: false,
 
-        remainingDate: day
+        remainingDate: day,
+        id: Math.floor(Math.random() * 1000000) 
     }
     let todos = JSON.parse(localStorage.getItem('todos'));
     todos.push(todo)
     localStorage.setItem('todos', JSON.stringify(todos))
     addHtml(todo)
-
+naame.value="";
+description.value="";
+date.value=""
 }
 
-function sortedbydate(arr) {
-
-    let sorted = arr.sort(function (a, b) {
-        return a.remainingDate - (b.remainingDate);
+function sortedbydate() {
+    
+    
+    let stocked = JSON.parse(localStorage.getItem('todos'));
+    console.log(stocked);
+    stocked.sort((a, b)=> {
+        return a.remainingDate - b.remainingDate;
     });
-    addHtml(sorted)
+    localStorage.setItem('todos', JSON.stringify(stocked))
+    // addHtml(stocked)
+    location.reload()
+    
+    
+  
 }
+
+sortt.addEventListener('click',sortedbydate)
 
 
 

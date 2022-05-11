@@ -12,7 +12,7 @@ table{
 }
 
 tr, td,th{
-    border: 1px solid black;
+    border: 1px solid #cfa8f4b4;
 }
 
 tr{
@@ -31,7 +31,18 @@ input{
     background-color: #8EC5FC;
     margin-bottom: 10px;
     border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #e0c3fcb4;
+    text-shadow: 0 0 5px #500b91;
+    border: none;
 
+}
+.add:hover{
+    cursor: pointer;
+    background-color: #e0c3fcb4;
+    color: #8EC5FC;
+    box-shadow: 0 0 5px #e0c3fcb4;
 }
 .container{
     background-color: #8EC5FC;
@@ -64,6 +75,10 @@ input{
 
 h1{
     margin-bottom: 40px;
+    color:#2b87b58c;
+    text-transform: capitalize;
+    font-size: 50px;
+    text-shadow: 0 0 5px #2b87b58c;
 }
 
 
@@ -102,14 +117,56 @@ h1,h2,h3{
     opacity: 0.5;
 
 }
-#select{
-    height: 30px;
-    width: 15%;
-    background-color: antiquewhite;
-    margin-bottom: 10px;
-    border-radius: 10px;
+.select-box{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
 }
-
+#select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    
+    border:none;
+    background: #8EC5FC ;
+    box-shadow:none;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#aa6de3 ;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    transition:.25s all ease;
+}
+.select-box::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #E0C3FC ;
+    
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+}
+.select-box:hover::after {
+    color: #E0C3FC;
+    background-color:#8EC5FC ;
+ }
+ #select:hover{
+     background-color: #E0C3FC;
+     color: #063c71;
+ }
 
 .name{
     font-size: medium;
@@ -118,4 +175,37 @@ h1,h2,h3{
     margin-left: 15px;
     flex-basis: 10%;
 
+}
+.sort{
+    background-color: #063c71;
+    color: #9332ee;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius:10px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px #9332ee;
+    margin:0 10px 0 10px;
+    transition: 0.5 all ease-in;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0 50px 0;
+}
+
+.sort:hover{
+    box-shadow: 1px 1px 5px #063c71;
+    cursor: pointer;
+}
+.named,.description,.date{
+    background-color:transparent;
+    border:none;
+    padding: 10px;
+    width: 95%;
+    outline: none;
+}
+.date{
+    width: 92%;
 }
