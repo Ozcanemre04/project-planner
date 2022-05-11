@@ -268,10 +268,20 @@ sortt.addEventListener('click',sortedbydate)
 
 
 
-add.addEventListener('click', createtodo)
+add.addEventListener('click',()=>{
+    if(naame.value===""&date.value===""){
+        alert('fill')
+    }
+    else{
+    createtodo()}
+})
 
 document.addEventListener('keyup',(e)=>{
     if(e.key==="Enter"){
-        createtodo()
+        if(naame.value===""&date.value===""){
+            alert('fill')
+        }
+        else{
+        createtodo()}
     }
 })
