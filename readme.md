@@ -1,7 +1,5 @@
 # project-planner
-|                |
-|                |
-|                |
+
 
 This project is a way for us to learn how to create a project-planner with a filter and some more features.
 Local storage, filters, displaying the remaining time , etc are some of the features used.
