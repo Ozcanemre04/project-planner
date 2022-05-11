@@ -98,6 +98,7 @@ function addHtml(todo) {
         })
 
         localStorage.setItem('todos', JSON.stringify(todos))
+        location.reload()
 
     })
 
@@ -120,6 +121,7 @@ function addHtml(todo) {
                 if(td.doing)
                     td.doing = false
             } 
+            location.reload()
         });
         
         
@@ -143,7 +145,7 @@ function addHtml(todo) {
     select.addEventListener('change', () => {
         if (select.value === "doing") {
 
-            if (doingcb.classList.contains("active")) {
+            if (todo.doing===true) {
 
                 sectionchild.style.display = "block"
 
@@ -160,7 +162,7 @@ function addHtml(todo) {
 
         if (select.value === "done") {
 
-            if (donecb.classList.contains("clicked")) {
+            if (todo.done===true) {
 
                 sectionchild.style.display = "block"
 
@@ -175,7 +177,7 @@ function addHtml(todo) {
 
         if (select.value === "todo") {
 
-            if (!donecb.classList.contains("clicked") & !doingcb.classList.contains('active')) {
+            if (todo.done===false &todo.doing===false) {
 
                 sectionchild.style.display = "block"
 
