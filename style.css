@@ -88,28 +88,51 @@ h1,h2,h3{
 .delete{
   margin-left: 50%;
   margin-bottom: 10px;
-
+outline: none;
   width: 80px;
   padding: 5px;
   border-radius: 10px;
   color: white;
   background-color: darkblue;
   transform: translateX(-50%);
-  
+  border: none;
+  transition: 0.25 all ease;
   
 
   
+}
+.delete:hover{
+    text-shadow:  0 0 5px white;
+    box-shadow: 0 0 5px darkblue;
 }
 
 .doing,.done{
     margin: 0;
    width: 10%;
+   position: relative;
 }
 
 .doing:checked ~ .name{
     color: green;
     opacity: 0.6;
 }
+.doing[title]:hover::after{
+    content: attr(title);
+  position: absolute;
+  top: -20%;
+  left: 80%;
+  color: rgba(4, 71, 4, 0.718);
+}
+.done[title]:hover::after{
+    content: attr(title);
+  position: absolute;
+  top: -20%;
+  left: 80%;
+  color:rgb(128, 8, 8);
+  text-decoration: line-through;
+
+}
+
 
 .done:checked + .name{
     text-decoration: line-through;
@@ -177,14 +200,13 @@ h1,h2,h3{
 
 }
 .sort{
-    background-color: #063c71;
-    color: #9332ee;
+    background-color: #E0C3FC;
+    color: #063c71;
     padding: 10px;
     width: 100px;
     border: none;
     border-radius:10px;
     text-transform: capitalize;
-    text-shadow: 1px 1px 5px #9332ee;
     margin:0 10px 0 10px;
     transition: 0.5 all ease-in;
 }
@@ -196,8 +218,11 @@ h1,h2,h3{
 }
 
 .sort:hover{
+    text-shadow: 1px 1px 5px #E0C3FC;
     box-shadow: 1px 1px 5px #063c71;
     cursor: pointer;
+    background-color: #063c71;
+    color: #E0C3FC;
 }
 .named,.description,.date{
     background-color:transparent;

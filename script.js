@@ -266,3 +266,9 @@ sortt.addEventListener('click',sortedbydate)
 
 
 add.addEventListener('click', createtodo)
+
+document.addEventListener('keyup',(e)=>{
+    if(e.key==="Enter"){
+        createtodo()
+    }
+})
