@@ -73,28 +73,28 @@ function addHtml(todo) {
     deletetodo.innerText = "delete"
     sectionchild.appendChild(deletetodo)
     //click event
+   
     doingcb.addEventListener('click', (e) => {
-
-
-        if (doingcb.checked) {
+     if (doingcb.checked) {
             doingcb.classList.add('active')
             donecb.checked = false
             donecb.classList.remove('clicked')
-
+         
 
         } else {
             doingcb.classList.remove('active')
+            
 
         }
-        let parent = e.target.parentElement;
-        let name = parent.children[2].textContent
-        console.log(name);
+        let parent = e.target.parentElement.parentElement.parentElement;
+        console.log(parent);
+        
         let todos = JSON.parse(localStorage.getItem('todos'));
         todos.forEach(td => {
-            if (td.name === name) td.doing = !td.doing
+            if (td.id == parent.id) td.doing = !td.doing
         });
         todos.forEach(td => {
-            if (td.name === name&td.done===true) td.done =! td.done
+            if (td.id == parent.id&td.done===true) td.done =! td.done
         })
 
         localStorage.setItem('todos', JSON.stringify(todos))
@@ -111,17 +111,18 @@ function addHtml(todo) {
          else {
             donecb.classList.remove('clicked')
         }
-        let parent = e.target.parentElement;
-        let name = parent.children[2].textContent
-        console.log(name);
+        let parent = e.target.parentElement.parentElement.parentElement;
+      
         let todos = JSON.parse(localStorage.getItem('todos'));
         todos.forEach(td => {
-            if (td.name === name) td.done = !td.done
+            if (td.id == parent.id){
+                td.done = !td.done
+                if(td.doing)
+                    td.doing = false
+            } 
         });
         
-        todos.forEach(td => {
-            if (td.name === name&td.doing===true) td.doing =! td.doing
-        })
+        
        
 
         localStorage.setItem('todos', JSON.stringify(todos))
@@ -129,8 +130,8 @@ function addHtml(todo) {
 
     deletetodo.addEventListener('click', (e) => {
         let parent = e.target.parentElement
-        let name = parent.firstChild.children[0].children[2].textContent
-        console.log(name);
+        console.log(parent);
+        
         parent.remove()
         let todos = JSON.parse(localStorage.getItem('todos'));
         todos = todos.filter(td => td.id != parent.id);
