@@ -270,7 +270,7 @@ sortt.addEventListener('click',sortedbydate)
 
 add.addEventListener('click',()=>{
     if(naame.value===""&date.value===""){
-        alert('fill')
+        alert('fill blank inputs')
     }
     else{
     createtodo()}
@@ -279,7 +279,7 @@ add.addEventListener('click',()=>{
 document.addEventListener('keyup',(e)=>{
     if(e.key==="Enter"){
         if(naame.value===""&date.value===""){
-            alert('fill')
+            alert('fill blank inputs')
         }
         else{
         createtodo()}
